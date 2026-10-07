@@ -92,7 +92,7 @@ let
     else
       "color ${sourceColorTypeMatcher cfg.source_color} \"${cfg.source_color}\"";
 
-  themePackage = builtins.trace command (
+  themePackage = (
     pkgs.runCommandLocal "matugen-themes-${cfg.variant}" { } ''
       mkdir -p $out
       cd $out
